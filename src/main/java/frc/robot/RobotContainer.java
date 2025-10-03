@@ -46,7 +46,7 @@ public class RobotContainer {
   }
 
   private void configureBindings() {
-    m_driverController.a().toggleOnTrue(new SetFlywheelToSpeed(m_Flywheel, 0));
+    m_driverController.a().toggleOnTrue(new SetFlywheelToSpeed(m_Flywheel));
   }
 
   /**

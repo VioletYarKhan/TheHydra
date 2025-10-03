@@ -8,16 +8,15 @@ public class SetFlywheelToSpeed extends Command {
     private Flywheel flywheel;
     private double rpm;
 
-    public SetFlywheelToSpeed(Flywheel flywheel, double rpm){
+    public SetFlywheelToSpeed(Flywheel flywheel){
         this.flywheel = flywheel;
-        this.rpm = rpm;
         addRequirements(flywheel);
+        SmartDashboard.putNumber("Desired Flywheel Speed (rpm)", 1000);
     }
 
     @Override
     public void initialize() {
-        SmartDashboard.putNumber("Desired Flywheel Speed (rpm)", rpm);
-    }
+        rpm = SmartDashboard.getNumber("Desired Flywheel Speed (rpm)", 1000);
 
     @Override
     public void execute() {

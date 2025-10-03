@@ -17,6 +17,7 @@ public class SetFlywheelToSpeed extends Command {
     @Override
     public void initialize() {
         rpm = SmartDashboard.getNumber("Desired Flywheel Speed (rpm)", 1000);
+    }
 
     @Override
     public void execute() {

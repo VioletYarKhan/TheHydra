@@ -52,7 +52,7 @@ public class Flywheel extends SubsystemBase {
     
     public void setPosition(double position) {
         pid.setReference(position, ControlType.kPosition);
-        SmartDashboard.putNumber("Requested Wrist Position", position);
+        SmartDashboard.putNumber("Requested Wheel Position", position);
 
         targetReference = position;
         currentControlType = ControlType.kPosition;

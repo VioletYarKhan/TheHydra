@@ -14,7 +14,7 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Configs;
 
 public class Flywheel extends SubsystemBase {
-    SparkMax motor = new SparkMax(11, MotorType.kBrushless);
+    SparkMax motor = new SparkMax(9, MotorType.kBrushless);
     RelativeEncoder encoder = motor.getEncoder();
     SparkClosedLoopController pid;
 
@@ -39,6 +39,7 @@ public class Flywheel extends SubsystemBase {
     public void set(double speed) {
         motor.set(speed);
         currentControlType = ControlType.kDutyCycle;
+        SmartDashboard.putNumber("Desired Duty Cycle", speed);
     }
 
     

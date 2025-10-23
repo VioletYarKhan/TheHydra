@@ -70,9 +70,9 @@ public class Configs {
                 flywheelConfig.closedLoop
                     .feedbackSensor(FeedbackSensor.kPrimaryEncoder)
                     // These are example gains you may need to them for your own robot!
-                    .pid(0.5, 0, 0.05)
+                    .pid(0.0001, 0, 0.0000005)
                     .velocityFF(0)
-                    .outputRange(-0.9, 0.9);
+                    .outputRange(-1, 1);
         }
     }
 }
